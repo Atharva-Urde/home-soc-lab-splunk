@@ -26,11 +26,11 @@ The goal is to simulate real-world SOC operations by collecting, monitoring, and
 
 ## Project Status
 
-* [ ] Repository Created
-* [ ] Splunk Installed
-* [ ] Sysmon Installed
-* [ ] Logs Ingested
-* [ ] First Detection Created
-* [ ] Dashboard Created
-* [ ] Attack Simulation Completed
-* [ ] Final Documentation Completed
+- [ ] Repository Created
+- [ ] Splunk Installed
+- [ ] Sysmon Installed
+- [ ] Logs Ingested
+- [ ] First Detection Created
+- [ ] Dashboard Created
+- [ ] Attack Simulation Completed
+- [ ] Final Documentation Completed
