@@ -31,11 +31,11 @@ home-soc-lab-splunk
 
 ### Status
 
-✓ GitHub Repository Created /n
-✓ Splunk Installed
-✓ Splunk Web UI Accessible
-✓ Search & Reporting Working
-✓ Internal Logs Indexed
+- [X] GitHub Repository Created
+- [X] Splunk Installed
+- [X] Splunk Web UI Accessible
+- [X] Search & Reporting Working
+- [X] Internal Logs Indexed
 
 ### Installation Notes
 
