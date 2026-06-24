@@ -43,3 +43,24 @@ Splunk Enterprise was successfully installed on the Windows 11 host machine.
 
 The Splunk Enterprise instance is operational and ready for log ingestion and SOC monitoring activities.
 
+## Internal Log Verification
+
+### Test Query
+
+index=_*
+
+### Result
+
+Successfully retrieved internal Splunk events from built-in indexes.
+
+### Observations
+
+* Splunk audit logs were present.
+* Search functionality was operational.
+* Internal indexing services were functioning correctly.
+
+### Conclusion
+
+The Splunk instance was verified as healthy and capable of ingesting and indexing data.
+
+
