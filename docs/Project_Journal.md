@@ -35,8 +35,7 @@ home-soc-lab-splunk
 - [X] Splunk Installed
 - [X] Splunk Web UI Accessible
 - [X] Search & Reporting Working
-- [X] Internal Logs Indexed
-
+- [X] Internal Indexes Verified
 ### Installation Notes
 
 During installation, Splunk Enterprise was configured to run using a Virtual Account. This configuration is suitable for standalone deployments and allows Splunk to access local Windows event logs and forwarded data without requiring domain credentials.
