@@ -34,3 +34,8 @@ home-soc-lab-splunk
 Repository created successfully.
 
 Next step: Install Splunk Enterprise and configure log ingestion.
+
+### Installation Notes
+
+During installation, Splunk Enterprise was configured to run using a Virtual Account. This configuration is suitable for standalone deployments and allows Splunk to access local Windows event logs and forwarded data without requiring domain credentials.
+
