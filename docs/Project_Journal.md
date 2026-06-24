@@ -31,7 +31,7 @@ home-soc-lab-splunk
 
 ### Status
 
-✓ GitHub Repository Created
+✓ GitHub Repository Created /n
 ✓ Splunk Installed
 ✓ Splunk Web UI Accessible
 ✓ Search & Reporting Working
