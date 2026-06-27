@@ -16,7 +16,7 @@ The architecture follows a simplified enterprise deployment where Windows Event 
                 Windows 11 Endpoint
         ┌────────────────────────────┐
         │                            │
-        │  Windows Event Logs         │
+        │  Windows Event Logs        │
         │  • Security                │
         │  • System                  │
         │  • Application             │
@@ -103,13 +103,13 @@ Windows Event Logs
 Universal Forwarder
         │
         ▼
-TCP 9997
+    TCP 9997
         │
         ▼
 Splunk Enterprise
         │
         ▼
-main Index
+    main Index
         │
         ▼
 Search & Reporting
