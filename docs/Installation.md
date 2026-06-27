@@ -131,6 +131,27 @@ Configured the Universal Forwarder to monitor:
 - System Logs
 - Application Logs
 
+
+Configuration File
+
+inputs.conf
+
+
+Configuration
+
+[WinEventLog://Application]
+disabled = 0
+index = main
+
+[WinEventLog://System]
+disabled = 0
+index = main
+
+[WinEventLog://Security]
+disabled = 0
+index = main
+
+
 Validation Command
 
 splunk list inputstatus
