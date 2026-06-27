@@ -1,66 +1,195 @@
-# Splunk Installation
-
-## Installation Date
-
-24 June 2026
-
-## Software
-
-* Splunk Enterprise
-* Windows 11 Home
-* 64-bit MSI Installer
+# Splunk Enterprise Installation and Configuration
 
 ## Objective
 
-Deploy Splunk Enterprise as the central SIEM platform for the Home SOC Lab.
+The objective of this phase was to deploy Splunk Enterprise, configure it as the central SIEM platform, install the Splunk Universal Forwarder, and successfully ingest Windows Event Logs for security monitoring.
 
-## Status
+---
 
-- [x] Splunk installer downloaded
-- [ ] Splunk installed
-- [ ] Web interface verified
-- [ ] Windows logs ingested
-- [ ] Sysmon integrated
+# Environment
 
-## Notes
+| Component | Details |
+|-----------|---------|
+| Host Operating System | Windows 11 Home |
+| CPU | Intel Core i5-1035G1 |
+| RAM | 8 GB |
+| SIEM Platform | Splunk Enterprise |
+| Log Collector | Splunk Universal Forwarder |
+| Network | Localhost (127.0.0.1) |
 
-Downloaded the official Splunk Enterprise installer from Splunk's website for deployment on the Windows host system.
+---
 
-## Installation Verification
+# Step 1 — Install Splunk Enterprise
 
-### Result
+## Purpose
 
-Splunk Enterprise was successfully installed on the Windows 11 host machine.
+Splunk Enterprise acts as the Security Information and Event Management (SIEM) platform responsible for receiving, indexing, storing, and analyzing security telemetry.
 
-### Verification Steps
+## Validation
 
-* Confirmed successful installation through the installer completion screen.
-* Verified access to the Splunk web interface at:
-  http://localhost:8000
-* Successfully authenticated using administrator credentials.
+Successfully accessed:
 
-### Outcome
+http://localhost:8000
 
-The Splunk Enterprise instance is operational and ready for log ingestion and SOC monitoring activities.
+Screenshot:
 
-## Internal Log Verification
+01-splunk-installation-success.png
 
-### Test Query
+---
 
-index=_*
+# Step 2 — Initial Login
 
-### Result
+## Purpose
 
-Successfully retrieved internal Splunk events from built-in indexes.
+Verify that Splunk Enterprise was installed successfully and the web interface is operational.
 
-### Observations
+## Validation
 
-* Splunk audit logs were present.
-* Search functionality was operational.
-* Internal indexing services were functioning correctly.
+Successfully authenticated into the Splunk Web interface.
 
-### Conclusion
+Screenshot:
 
-The Splunk instance was verified as healthy and capable of ingesting and indexing data.
+02-splunk-login-dashboard.png
 
+---
 
+# Step 3 — Access Search & Reporting
+
+## Purpose
+
+The Search & Reporting application provides the interface for searching, analyzing, and investigating security logs.
+
+## Validation
+
+Successfully opened the Search & Reporting application.
+
+Screenshot:
+
+03-search-reporting-app.png
+
+---
+
+# Step 4 — Configure Receiving Port
+
+## Purpose
+
+Configured Splunk Enterprise to receive data from Universal Forwarders over TCP port 9997.
+
+Receiving Port:
+
+9997
+
+Screenshot:
+
+04-receiving-port-9997-enabled.png
+
+---
+
+# Step 5 — Install Universal Forwarder
+
+## Purpose
+
+The Splunk Universal Forwarder collects Windows Event Logs and securely forwards them to Splunk Enterprise.
+
+Screenshot:
+
+05-universal-forwarder-installation-success.png
+
+---
+
+# Step 6 — Configure outputs.conf
+
+## Purpose
+
+Configured the Universal Forwarder to forward collected telemetry to Splunk Enterprise.
+
+Configuration:
+
+server = 127.0.0.1:9997
+
+Screenshot:
+
+06-outputs-conf.png
+
+---
+
+# Step 7 — Configure Windows Event Log Collection
+
+## Purpose
+
+Configured the Universal Forwarder to monitor:
+
+- Security Logs
+- System Logs
+- Application Logs
+
+Validation Command
+
+splunk list inputstatus
+
+Screenshot:
+
+07-win-eventlog-inputs.png
+
+---
+
+# Step 8 — Verify Log Ingestion
+
+## SPL Query
+
+index=main
+
+Validation
+
+Confirmed Windows logs were successfully ingested into Splunk Enterprise.
+
+Screenshot:
+
+08-index-main-events.png
+
+---
+
+# Step 9 — Verify Security Log Collection
+
+## SPL Query
+
+index=main sourcetype=WinEventLog:Security EventCode=4624
+
+Validation
+
+Successfully identified Windows successful logon events.
+
+Screenshot:
+
+09-security-logon-events.png
+
+---
+
+# Result
+
+Successfully deployed a functional Splunk-based SIEM capable of collecting and searching Windows Security, System, and Application Event Logs.
+
+The environment is now ready for additional telemetry sources including Sysmon and PowerShell logging.
+
+---
+
+# Key Takeaways
+
+- Installed Splunk Enterprise
+- Configured data receiving
+- Installed Universal Forwarder
+- Forwarded Windows Event Logs
+- Validated Security Event ingestion
+- Successfully executed initial SPL queries
+
+---
+
+# Interview Questions
+
+### Why is Splunk Enterprise required?
+
+### What is the purpose of TCP port 9997?
+
+### Why do we use a Universal Forwarder instead of installing Splunk Enterprise on every endpoint?
+
+### Why are Windows Event Logs valuable during incident investigations?
