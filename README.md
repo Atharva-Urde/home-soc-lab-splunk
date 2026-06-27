@@ -1,36 +1,88 @@
-# Home SOC Lab using Splunk
+# 🛡️ Home SOC Lab using Splunk
 
-## Project Overview
+## Overview
 
-This project documents the creation of a Home Security Operations Center (SOC) Lab using Splunk Enterprise, Sysmon, and Windows Event Logs.
+This project documents the design and implementation of a Home Security Operations Center (SOC) Lab using Splunk Enterprise. The objective is to simulate a real-world SOC environment by collecting, monitoring, and analyzing Windows security telemetry while building practical detection engineering and threat hunting skills.
 
-The goal is to simulate real-world SOC operations by collecting, monitoring, and analyzing security events generated on a Windows endpoint.
+Unlike a basic installation guide, this repository follows a structured engineering approach by documenting the complete deployment process, configuration files, troubleshooting steps, validation procedures, and future enhancements.
 
-## Objectives
+---
 
-* Deploy Splunk Enterprise locally
-* Collect Windows Event Logs
-* Configure Sysmon for enhanced logging
-* Create security detections using SPL
-* Simulate cyber attacks safely
-* Investigate security events
+## Project Objectives
+
+* Deploy Splunk Enterprise as the SIEM platform
+* Configure Splunk Universal Forwarder for log collection
+* Ingest Windows Event Logs
+* Integrate Sysmon for enhanced endpoint telemetry
+* Develop detection rules using SPL
 * Build SOC dashboards
-* Map detections to MITRE ATT&CK techniques
+* Simulate attacks from a Kali Linux machine
+* Map detections to the MITRE ATT&CK Framework
+* Document the complete deployment process
 
-## Tools Used
+---
+
+## Current Project Status
+
+### Completed
+
+* Splunk Enterprise Installation
+* Splunk Web Configuration
+* Universal Forwarder Deployment
+* Windows Event Log Collection
+* Successful Security Event Ingestion
+
+### In Progress
+
+* Repository Documentation
+* Architecture Documentation
+
+### Planned
+
+* Sysmon Integration
+* Detection Engineering
+* Dashboard Development
+* Attack Simulation
+* Incident Investigations
+
+---
+
+## Repository Structure
+
+```text
+docs/
+configs/
+detections/
+dashboards/
+screenshots/
+README.md
+```
+
+---
+
+## Documentation
+
+| Document           | Description                        |
+| ------------------ | ---------------------------------- |
+| Architecture.md    | Lab architecture and data flow     |
+| Installation.md    | Complete installation procedure    |
+| Validation.md      | Validation steps and screenshots   |
+| Troubleshooting.md | Issues encountered and resolutions |
+
+---
+
+## Technologies Used
 
 * Splunk Enterprise
-* Sysmon
-* Windows Event Viewer
 * Splunk Universal Forwarder
+* Windows 11
+* Kali Linux (VirtualBox)
+* SPL (Search Processing Language)
 
-## Project Status
+---
 
-- [ ] Repository Created
-- [ ] Splunk Installed
-- [ ] Sysmon Installed
-- [ ] Logs Ingested
-- [ ] First Detection Created
-- [ ] Dashboard Created
-- [ ] Attack Simulation Completed
-- [ ] Final Documentation Completed
+## Author
+
+**Atharva Urde**
+
+This project is being developed as a practical cybersecurity portfolio focused on SOC operations, SIEM deployment, detection engineering, and threat hunting.
