@@ -1,5 +1,13 @@
 # Splunk Enterprise Installation and Configuration
 
+**Project Phase:** Phase 1 – SIEM Deployment
+
+**Status:** ✅ Completed
+
+**Last Updated:** July 2026
+
+**Author:** Atharva Urde
+
 ## Objective
 
 The objective of this phase was to deploy Splunk Enterprise, configure it as the central SIEM platform, install the Splunk Universal Forwarder, and successfully ingest Windows Event Logs for security monitoring.
