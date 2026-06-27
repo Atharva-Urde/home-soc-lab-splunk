@@ -1,0 +1,16 @@
+Windows 11
+│
+├── Windows Event Logs
+│     ├── Security ✅
+│     ├── System ✅
+│     └── Application ✅
+│
+├── Splunk Universal Forwarder ✅
+│
+└────────────► localhost:9997
+                │
+                ▼
+        Splunk Enterprise
+             │
+             ▼
+      Search & Reporting
